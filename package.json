@@ -1,0 +1,46 @@
+{
+  "name": "@globalmoo/globalmoo-sdk",
+  "version": "1.0.0",
+  "description": "JavaScript SDK for the globalMOO API",
+  "main": "src/index.js",
+  "type": "module",
+  "scripts": {
+    "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js",
+    "prepare": "npm test"
+  },
+  "dependencies": {
+    "axios": "^1.6.7",
+    "dotenv": "^16.4.1"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0"
+  },
+  "jest": {
+    "transform": {},
+    "testEnvironment": "node",
+    "moduleNameMapper": {
+      "^(\\.{1,2}/.*)\\.js$": "$1"
+    }
+  },
+  "keywords": [
+    "globalmoo",
+    "optimization",
+    "sdk",
+    "api"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/globalmoo/gmoo-sdk-javascript.git"
+  },
+  "bugs": {
+    "url": "https://github.com/globalmoo/gmoo-sdk-javascript/issues"
+  },
+  "homepage": "https://github.com/globalmoo/gmoo-sdk-javascript#readme",
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  }
+}
