@@ -1,6 +1,7 @@
 // File: src/requests/create-model.js
 import { BaseRequest } from './base.js';
 import { Model } from '../models/model.js';
+import { InvalidArgumentException } from '../exceptions/invalid-argument.js';
 
 export class CreateModel extends BaseRequest {
   constructor(name, description = null) {
