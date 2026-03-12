@@ -9,6 +9,8 @@ export class Account extends GlobalMooModel {
     this.updated_at = new Date(data.updatedAt);
     this.disabled_at = data.disabledAt ? new Date(data.disabledAt) : null;
     this.company = data.company;
+    this.first_name = data.firstName;
+    this.last_name = data.lastName;
     this.name = data.name;
     this.email = data.email;
     this.api_key = data.apiKey;

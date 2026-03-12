@@ -2,13 +2,15 @@ import { BaseRequest } from './base.js';
 import { Account } from '../models/account.js';
 
 export class RegisterAccount extends BaseRequest {
-  constructor(company, name, email, password, timeZone) {
+  constructor(firstName, lastName, company, email, password, timeZone, agreement = true) {
     super();
+    this.firstName = firstName;
+    this.lastName = lastName;
     this.company = company;
-    this.name = name;
     this.email = email;
     this.password = password;
     this.timeZone = timeZone;
+    this.agreement = agreement;
   }
 
   _getPath() {
@@ -21,11 +23,13 @@ export class RegisterAccount extends BaseRequest {
 
   toDict() {
     return {
+      firstName: this.firstName,
+      lastName: this.lastName,
       company: this.company,
-      name: this.name,
       email: this.email,
       password: this.password,
-      timeZone: this.timeZone
+      timeZone: this.timeZone,
+      agreement: this.agreement
     };
   }
 }
